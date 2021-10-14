@@ -4,6 +4,13 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var models = require("./models");
 var cors = require("cors");
+var mysql      = require('mysql');
+var db = mysql.createConnection({
+  host     : 'localhost',
+  user     : 'root',
+  password : 'Password1!',
+  database : 'SocialMedia'
+});
 
 var tasksRouter = require("./routes/tasks");
 
